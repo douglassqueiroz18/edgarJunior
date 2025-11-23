@@ -1,0 +1,136 @@
+/* Presença, contraste e personalidade */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background: linear-gradient(180deg, #c5c8cc, #081325);
+  background-attachment: fixed;
+  color: #f1f1f1;
+  font-family: "Poppins", Segoe UI, Tahoma, sans-serif;
+  padding: 30px 15px;
+  overflow-x: hidden;
+  position: relative;
+  animation: fadeIn 1s ease;
+}
+
+/* Marca com mais presença no fundo */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("logoFundo.jpg");
+  background-size: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.04;
+  filter: grayscale(100%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Logo com leve animação */
+.logo {
+  width: 180px;
+  height: auto;
+  margin: 20px;
+  animation: float 4s ease-in-out infinite;
+}
+
+header {
+  margin-bottom: 40px;
+}
+
+/* Títulos com força visual */
+h1 {
+  font-size: 38px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+p {
+  max-width: 600px;
+  margin: auto;
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* Caixa de conteúdo */
+.box h3 {
+  font-size: 22px;
+  color: #90c7ff;
+  margin-bottom: 20px;
+}
+
+/* Botões realmente chamativos */
+.btn {
+  display: block;
+  width: 90%;
+  max-width: 360px;
+  padding: 15px 22px;
+  border-radius: 12px;
+  margin: 15px auto;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.3s;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+/* Instagram com gradiente moderno */
+.btn-instagram {
+  background: linear-gradient(45deg, #ff9a3c, #ff2d8b);
+  color: #fff;
+}
+
+/* WhatsApp com mais presença */
+.btn-zap {
+  background: linear-gradient(45deg, #00c851, #007e2b);
+  color: #fff;
+}
+
+.btn:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.5);
+}
+
+/* Botão Virtual NFC mais premium */
+.virtualnfc-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 18px;
+  font-size: 14px;
+  color: white;
+  border: 1px solid #ffffff77;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+  backdrop-filter: blur(4px);
+}
+
+.virtualnfc-btn:hover {
+  background: #ffffff1a;
+  border-color: white;
+}
+
+/* Rodapé */
+.footer {
+  font-size: 13px;
+  opacity: 0.8;
+  margin-top: auto;
+  padding: 15px 0;
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
